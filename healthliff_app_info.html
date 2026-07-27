@@ -1,175 +1,626 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)https://landerwang.asuscomm.com:5174/privacy.html -->
-<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>隱私權政策 – 灶神在家・銀髮健康餐</title>
+  <meta name="description" content="HealthLiff（灶神在家・銀髮健康餐）隱私權政策，說明個人資料、HealthKit、Health Connect、推播通知、資料保存及帳號刪除方式。">
+  <title>隱私權政策｜HealthLiff・灶神在家銀髮健康餐</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background: #fafaf9;
-      color: #374151;
-      font-size: 15px;
-      line-height: 1.75;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+
+    :root {
+      color-scheme: light;
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --surface-soft: #fffbeb;
+      --text: #374151;
+      --text-strong: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --brand: #b45309;
+      --brand-soft: #fef3c7;
+      --link: #9a3412;
+      --danger-bg: #fff7ed;
+      --danger-border: #fdba74;
+      --dark: #111827;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--brand-soft);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid #e5e7eb;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
       padding: 12px 16px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
+
     .header-inner {
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto;
     }
+
     .brand {
+      color: var(--brand);
       font-size: 12px;
-      font-weight: 600;
-      color: #d97706;
-    }
-    h1 {
-      font-size: 20px;
       font-weight: 700;
-      color: #111827;
+      letter-spacing: 0.02em;
     }
+
+    h1 {
+      color: var(--text-strong);
+      font-size: clamp(20px, 4vw, 26px);
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
     main {
-      max-width: 720px;
+      width: min(100%, 860px);
       margin: 0 auto;
-      padding: 24px 20px 48px;
+      padding: 24px 20px 56px;
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 22px;
     }
-    .card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
+
+    .card,
+    article,
+    .contact-box {
       border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     }
+
+    .card,
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .intro-card {
+      padding: 22px;
+    }
+
     .card-desc {
+      color: var(--text);
       font-size: 14px;
-      color: #6b7280;
     }
+
     .card-date {
       margin-top: 8px;
+      color: var(--muted);
       font-size: 12px;
-      color: #9ca3af;
     }
+
+    .quick-links {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 6px 11px;
+      border: 1px solid #f59e0b;
+      border-radius: 999px;
+      background: var(--surface-soft);
+      color: #92400e;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .highlight-box {
+      padding: 18px;
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      border-left: 5px solid #ea580c;
+      border-radius: 12px;
+    }
+
+    .highlight-box h2 {
+      color: #9a3412;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .highlight-box p {
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
     article {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      padding: 22px;
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: 30px;
     }
-    section.policy-section { display: flex; flex-direction: column; gap: 8px; }
+
+    section.policy-section {
+      scroll-margin-top: 92px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     section.policy-section h2 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111827;
+      color: var(--text-strong);
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.55;
     }
-    section.policy-section p {
+
+    section.policy-section h3 {
+      margin-top: 8px;
+      color: var(--text-strong);
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    section.policy-section p,
+    section.policy-section li,
+    section.policy-section th,
+    section.policy-section td {
       font-size: 14px;
       line-height: 1.85;
-      color: #374151;
     }
+
+    ul,
+    ol {
+      padding-left: 1.35rem;
+    }
+
+    li + li {
+      margin-top: 5px;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      background: var(--surface);
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #f9fafb;
+      color: var(--text-strong);
+      font-weight: 800;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .notice {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+    }
+
+    .notice strong {
+      color: var(--text-strong);
+    }
+
     .contact-box {
-      background: #111827;
-      border-radius: 16px;
-      padding: 20px;
-      color: #fff;
+      padding: 22px;
+      background: var(--dark);
+      color: #ffffff;
     }
-    .contact-box h2 { font-size: 15px; font-weight: 700; }
-    .contact-box p { margin-top: 4px; font-size: 14px; color: #d1d5db; }
-    .contact-links { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
-    .contact-links a {
+
+    .contact-box h2 {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .contact-box p {
+      margin-top: 5px;
+      color: #d1d5db;
       font-size: 14px;
-      color: #fcd34d;
-      text-decoration: underline;
     }
+
+    .contact-links {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .contact-links a {
+      color: #fcd34d;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
     nav.policy-nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 8px 16px;
-      font-size: 14px;
       color: #4b5563;
+      font-size: 13px;
     }
+
     nav.policy-nav a {
       color: #4b5563;
-      text-decoration: underline;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 18px 14px 42px;
+      }
+
+      .intro-card,
+      article,
+      .contact-box {
+        padding: 18px;
+        border-radius: 14px;
+      }
+
+      article {
+        gap: 26px;
+      }
+    }
+
+    @media print {
+      header {
+        position: static;
+      }
+
+      body,
+      html {
+        background: #ffffff;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .card,
+      article,
+      .contact-box {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+
+      .quick-links,
+      nav.policy-nav {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="header-inner">
-      <p class="brand">灶神在家・銀髮健康餐</p>
+      <p class="brand">HealthLiff・灶神在家・銀髮健康餐</p>
       <h1>隱私權政策</h1>
     </div>
   </header>
 
   <main>
-    <div class="card">
-      <p class="card-desc">說明個人資料的蒐集、利用、保護與當事人權利。</p>
-      <p class="card-date">最後更新：2026 年 7 月 13 日</p>
+    <div class="card intro-card">
+      <p class="card-desc">
+        本政策說明 HealthLiff（灶神在家・銀髮健康餐，以下稱「本 App」或「本服務」）如何蒐集、使用、分享、保存及保護您的個人資料，並說明您對 Apple HealthKit、Android Health Connect、推播通知及帳號資料所享有的控制權。
+      </p>
+      <p class="card-date"><strong>生效及最後更新日期：</strong>2026 年 7 月 27 日</p>
+      <nav class="quick-links" aria-label="隱私權政策快速導覽">
+        <a href="#data-collected">蒐集資料</a>
+        <a href="#health-data">健康資料</a>
+        <a href="#third-parties">第三方服務</a>
+        <a href="#retention">保存期限</a>
+        <a href="#account-deletion">帳號刪除</a>
+        <a href="#contact">聯絡我們</a>
+      </nav>
+    </div>
+
+    <div class="highlight-box" role="note" aria-labelledby="health-summary-title">
+      <h2 id="health-summary-title">健康資料重要說明</h2>
+      <p>
+        本 App 僅在您主動授權後，為顯示健康趨勢、同步健康紀錄、提供個人健康管理與相關提醒而存取 HealthKit 或 Health Connect 資料。健康資料不會出售，也不會用於廣告、行銷、資料仲介、信用評估、貸款、保險資格、就業判斷或未經您同意的公開分享。
+      </p>
     </div>
 
     <article>
-      <section class="policy-section">
-        <h2>一、蒐集的資料</h2>
-        <p>為提供會員、訂餐、配送、付款、客服與健康照護功能，本平台可蒐集姓名、電話、LINE 識別資訊、頭像、配送地址、收餐人資料、訂單與付款狀態、客服紀錄，以及您主動提供的飲食偏好、健康狀況、餐食照片與健康數據。</p>
+      <section class="policy-section" id="scope">
+        <h2>一、適用範圍與資料管理者</h2>
+        <p>
+          本政策適用於本 App、與本 App 連接的網站、後端服務及客服流程。提供資料前，請先閱讀本政策；如法令或平台政策要求另行取得同意，本 App 會在蒐集前以獨立、清楚的畫面向您說明並取得授權，不會僅以您持續使用本 App 視為已同意敏感資料處理。
+        </p>
+        <p>
+          本服務之資料管理及隱私聯絡窗口為「灶神在家・銀髮健康餐」營運團隊，聯絡方式載於本政策末尾。
+        </p>
       </section>
 
-      <section class="policy-section">
-        <h2>二、利用目的</h2>
-        <p>上述資料用於身分識別、會員與家屬關聯、訂單處理、收款對帳、備餐配送、飲食與健康管理、營養師服務、通知提醒、客服與爭議處理、資訊安全、服務改善及法令遵循。</p>
+      <section class="policy-section" id="data-collected">
+        <h2>二、我們蒐集的資料</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">資料類別</th>
+                <th scope="col">可能包含的內容</th>
+                <th scope="col">來源</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>帳號與識別資料</td>
+                <td>姓名、電話、電子郵件、會員編號、LINE 使用者識別資訊、顯示名稱、頭像、登入或驗證狀態。</td>
+                <td>您提供、LINE Login 授權或本服務帳號系統。</td>
+              </tr>
+              <tr>
+                <td>訂餐、配送與交易資料</td>
+                <td>配送地址、收餐人資料、餐食偏好、訂單內容、金額、付款狀態、發票或對帳資訊、取消與退款紀錄。</td>
+                <td>您提供、訂單流程、金流或物流服務。</td>
+              </tr>
+              <tr>
+                <td>健康與照護資料</td>
+                <td>您主動輸入或上傳的健康狀況、飲食紀錄、餐食照片，以及經您授權自 HealthKit／Health Connect 讀取的健康資料。現行健康同步功能可能包含血壓資料（收縮壓與舒張壓）；本 App 只會請求實際功能所需的資料類型，新增類型時會先於系統授權畫面告知並請求權限。</td>
+                <td>您提供，或經您授權由裝置上的 HealthKit／Health Connect 提供。</td>
+              </tr>
+              <tr>
+                <td>家屬與照護關聯資料</td>
+                <td>會員與家屬、收餐人、營養照護或其他經您建立之關聯，以及該關聯所需的聯絡與授權資訊。</td>
+                <td>您或經授權的關係人提供。</td>
+              </tr>
+              <tr>
+                <td>客服與使用紀錄</td>
+                <td>客服往來、問題回報、同意與權限狀態、功能操作紀錄、錯誤紀錄及必要的稽核紀錄。</td>
+                <td>您提供或系統在提供服務及排除故障時產生。</td>
+              </tr>
+              <tr>
+                <td>裝置與技術資料</td>
+                <td>裝置類型、作業系統與 App 版本、IP 位址、登入時間、推播權杖、語系，以及維護安全與服務穩定所需的技術資訊。</td>
+                <td>您的裝置、伺服器紀錄、APNs 或 FCM。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          本 App 採資料最小化原則；若您拒絕提供非必要資料，仍可使用不依賴該資料的功能。若資料是完成登入、訂單、付款、配送或特定健康功能所必要，拒絕提供可能使該功能無法使用。
+        </p>
       </section>
 
-      <section class="policy-section">
-        <h2>三、資料使用對象與地區</h2>
-        <p>在達成上述目的的必要範圍內，資料可由本平台授權人員，以及受委託的 LINE、金流、金融機構、物流配送、雲端托管、資訊系統與專業服務供應商處理。本平台不會將個人資料出售給第三人。</p>
+      <section class="policy-section" id="health-data">
+        <h2>三、Apple HealthKit 與 Android Health Connect</h2>
+        <h3>3.1 存取方式與用途</h3>
+        <ul>
+          <li>本 App 只會在您看到用途說明並於 iOS 或 Android 系統授權畫面主動允許後，讀取相應健康資料。</li>
+          <li>資料用於 App 內的個人健康紀錄、儀表板與趨勢呈現、背景同步、異常或照護提醒，以及您主動選擇的健康管理服務。</li>
+          <li>本 App 僅請求完成上述可見功能所需的最小資料範圍，不會因拒絕某一類健康資料權限而推測或繞過系統權限。</li>
+          <li>若您開啟背景同步，經授權的健康資料可能透過加密連線上傳至本服務後端，以便跨裝置同步、保存健康紀錄或提供您選擇的健康管理功能。</li>
+        </ul>
+
+        <h3>3.2 嚴格禁止用途</h3>
+        <p>本 App 不會將透過 HealthKit 或 Health Connect 取得的健康與健身資料：</p>
+        <ul>
+          <li>出售、出租或提供給廣告平台、資料仲介商、資訊轉售商或其他未經授權的第三方；</li>
+          <li>用於廣告投放、個人化廣告、跨 App 追蹤、行銷名單或以使用行為為基礎的資料探勘；</li>
+          <li>用於判斷信用、貸款、保險資格、保費、就業適任性或其他可能對您造成重大影響的商業決策；</li>
+          <li>在未取得您明確且知情的同意前，公開展示、社群分享或提供給非必要第三方；</li>
+          <li>用於與本 App 已揭露健康管理功能無關的次要目的。</li>
+        </ul>
+
+        <h3>3.3 權限管理與撤回</h3>
+        <p>
+          您可隨時在 iOS 的「健康」或系統隱私權設定，以及 Android 的 Health Connect 權限設定中，查看、調整或撤回本 App 的資料存取權。撤回權限會停止本 App 後續自裝置讀取相應資料，但不一定會自動刪除先前已同步至本服務後端的資料；如需刪除後端資料，請依「八、帳號及資料刪除」提出申請。
+        </p>
+        <div class="notice">
+          <strong>資料準確性：</strong>HealthKit、Health Connect、穿戴裝置或您自行輸入的資料可能不完整或有誤。本 App 不會刻意寫入虛假或不正確的健康資料，也不以 iCloud 儲存由 HealthKit 取得的個人健康資訊。
+        </div>
       </section>
 
-      <section class="policy-section">
-        <h2>四、保存期間與安全</h2>
-        <p>資料於會員關係、訂單履行、法定憑證保存、爭議處理或業務所必要的期間內保留，期間屆滿後刪除、停止利用或去識別化。本平台採用權限管理、傳輸保護、紀錄與其他合理安全措施降低未經授權存取風險。</p>
+      <section class="policy-section" id="purposes">
+        <h2>四、資料使用目的</h2>
+        <ul>
+          <li>建立、驗證與管理會員帳號及 LINE 登入。</li>
+          <li>建立會員與家屬或照護關聯。</li>
+          <li>處理訂餐、付款、對帳、備餐、配送、取消與退款。</li>
+          <li>提供飲食紀錄、健康儀表板、趨勢分析、健康同步、營養或照護服務。</li>
+          <li>發送訂單狀態、配送、健康提醒、系統安全或重要服務通知。</li>
+          <li>處理客服、申訴、爭議、資安事件與防止詐欺或濫用。</li>
+          <li>維護、除錯、改善服務品質；如使用彙總或去識別資料進行內部分析，將盡合理努力避免資料可重新識別至特定個人。</li>
+          <li>履行會計、稅務、消費者保護、個人資料保護及其他法定義務。</li>
+        </ul>
       </section>
 
-      <section class="policy-section">
-        <h2>五、當事人權利</h2>
-        <p>您可依法請求查詢、閱覽、製給複製本、補充或更正、停止蒐集或利用、刪除個人資料。若該資料為完成訂單、配送、付款或法定義務所必須，拒絕提供或要求刪除可能導致相關服務無法提供。</p>
+      <section class="policy-section" id="permissions">
+        <h2>五、裝置權限、通知與同意</h2>
+        <ul>
+          <li><strong>健康資料權限：</strong>僅在使用相關健康功能時提出，您可分別允許或拒絕各資料類型。</li>
+          <li><strong>相機或照片：</strong>如您選擇拍攝或上傳餐食、健康或客服相關圖片，本 App 才會請求相應權限；未選擇該功能時不會主動存取。</li>
+          <li><strong>推播通知：</strong>本 App 可能使用 Apple Push Notification service（APNs）與 Firebase Cloud Messaging（FCM）傳送必要通知，並處理裝置推播權杖及訊息傳遞所需的技術資料。推播資料不會用於廣告投放。</li>
+          <li><strong>LINE Login：</strong>如您選擇以 LINE 登入，本 App 只會接收您在 LINE 授權畫面同意提供的必要識別資料。</li>
+        </ul>
+        <p>
+          您可透過裝置設定關閉通知或撤回權限。對於敏感資料或使用者合理預期之外的蒐集，本 App 會在存取前提供醒目說明，並要求您以明確操作表示同意。
+        </p>
       </section>
 
-      <section class="policy-section">
-        <h2>六、未成年人與政策修訂</h2>
-        <p>未成年人使用付費服務應取得法定代理人同意。本政策如因服務或法令調整而修訂，將於本頁公告最新內容與日期。</p>
+      <section class="policy-section" id="third-parties">
+        <h2>六、資料分享、委託處理與第三方服務</h2>
+        <p>
+          本 App 不出售您的個人資料。為完成您要求的服務，我們可能在必要且最小範圍內，將資料提供給下列受託服務供應商或合作對象；各對象僅能依約定目的處理資料，並應提供不低於本政策及適用平台規範所要求的保護：
+        </p>
+        <ul>
+          <li><strong>帳號與身分驗證：</strong>LINE Login。</li>
+          <li><strong>行動平台健康服務：</strong>Apple HealthKit、Android Health Connect。</li>
+          <li><strong>通知服務：</strong>Apple APNs、Google Firebase Cloud Messaging。</li>
+          <li><strong>交易服務：</strong>金流服務商、金融機構、發票或對帳服務商。</li>
+          <li><strong>履約服務：</strong>備餐、物流、配送及客服合作單位。</li>
+          <li><strong>資訊基礎設施：</strong>雲端托管、資料庫、備份、資安、系統維運及錯誤排查服務商。</li>
+          <li><strong>專業服務：</strong>在您選擇或授權的情況下，提供營養、健康或照護服務的專業人員。</li>
+        </ul>
+        <p>
+          健康資料不會因訂單、付款或物流作業而提供給金流、金融機構或物流服務商。除非取得您的明確同意、為提供您主動要求的健康服務所必要、依法配合有效命令，或為處理重大資安事件所必要，我們不會將健康資料提供給其他第三方。
+        </p>
+        <p>
+          如本服務發生合併、收購、重組或資產移轉，我們會依適用法令提供必要通知，並要求承受方持續遵守相同或更高的資料保護標準。
+        </p>
+      </section>
+
+      <section class="policy-section" id="tracking">
+        <h2>七、廣告、追蹤與資料出售</h2>
+        <p>
+          本 App 不會出售個人資料，且不會以 HealthKit 或 Health Connect 資料進行廣告、跨 App 追蹤或行銷。若未來導入分析或第三方 SDK，我們會先確認其資料處理符合 Apple、Google 及適用法令，更新本政策與商店中的隱私揭露，並在依法或依平台規範需要時先取得您的同意。
+        </p>
+      </section>
+
+      <section class="policy-section" id="retention">
+        <h2>八、資料保存、停用與刪除</h2>
+        <ul>
+          <li><strong>帳號、會員及健康資料：</strong>原則上於帳號存續、您持續使用相關功能或達成蒐集目的所必要期間保存；在您撤回同意、提出刪除要求或目的消失後，將依本政策及適用法令刪除、停止利用或去識別化。</li>
+          <li><strong>訂單、付款、發票與交易資料：</strong>可能依會計、稅務、消費者保護、爭議處理或其他法定保存義務保留至法定期限屆滿。</li>
+          <li><strong>客服、資安與稽核紀錄：</strong>於處理問題、防止詐欺、保護帳號安全或履行法律義務所必要期間保存。</li>
+          <li><strong>備份資料：</strong>刪除後的資料可能在加密備份中短暫留存，並依既定備份輪替週期覆寫；除災難復原、資安調查或法律要求外，不會重新投入一般業務使用。</li>
+        </ul>
+        <p>
+          若依法必須保留部分資料，我們會限制該資料僅供法定、資安或爭議處理目的使用，不會以帳號停用或凍結取代應執行的帳號刪除。
+        </p>
+      </section>
+
+      <section class="policy-section" id="account-deletion">
+        <h2>九、帳號及資料刪除申請</h2>
+        <p>
+          如本 App 提供會員帳號，您可從 App 內的帳號或個人設定頁面啟動「刪除帳號」流程。您也可以在未安裝或無法登入 App 時，透過下方電子郵件提出外部刪除申請：
+        </p>
+        <div class="notice">
+          <p>
+            <strong>刪除申請信箱：</strong>
+            <a href="mailto:service@zaogod.com?subject=HealthLiff%20%E5%B8%B3%E8%99%9F%E8%88%87%E8%B3%87%E6%96%99%E5%88%AA%E9%99%A4%E7%94%B3%E8%AB%8B&amp;body=%E8%AB%8B%E6%8F%90%E4%BE%9B%E6%82%A8%E7%9A%84%E6%9C%83%E5%93%A1%E5%A7%93%E5%90%8D%E3%80%81%E7%99%BB%E5%85%A5%E9%9B%BB%E8%A9%B1%E6%88%96%20LINE%20%E5%B8%B3%E8%99%9F%E8%AD%98%E5%88%A5%E8%B3%87%E8%A8%8A%EF%BC%8C%E4%B8%A6%E8%A8%BB%E6%98%8E%E3%80%8C%E7%94%B3%E8%AB%8B%E5%88%AA%E9%99%A4%E5%B8%B3%E8%99%9F%E8%88%87%E9%97%9C%E8%81%AF%E8%B3%87%E6%96%99%E3%80%8D%E3%80%82">service@zaogod.com</a>
+          </p>
+          <p>建議主旨：HealthLiff 帳號與資料刪除申請</p>
+        </div>
+        <p>
+          為避免他人冒用，我們可能要求您完成合理的身分驗證。帳號刪除完成後，與帳號直接關聯的個人資料、健康同步資料、照片與可識別使用紀錄將予刪除或不可逆去識別化；依法或基於資安、詐欺防制及爭議處理而必須保留的資料除外。單純停用、登出或解除 LINE 授權不等同於刪除本服務帳號及其後端資料。
+        </p>
+        <p>
+          您亦可只要求刪除特定健康紀錄、停止健康同步，或撤回特定資料處理同意，而不必刪除整個帳號。
+        </p>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2>十、資訊安全與跨境處理</h2>
+        <p>
+          我們依資料敏感程度採取合理的技術與管理措施，包括傳輸加密、存取權限控管、身分驗證、操作與安全紀錄、備份保護及人員權限管理，以降低未經授權存取、洩漏、竄改、遺失或毀損的風險。網路傳輸或儲存系統無法保證絕對安全；如發生依法應通知的個人資料事件，我們將依適用法令採取處理及通知措施。
+        </p>
+        <p>
+          因雲端、通知、平台或專業服務需求，資料可能在台灣或服務供應商營運的其他國家或地區處理。我們會要求受託方採取適當保護措施，並僅在提供服務所必要範圍內跨境處理。
+        </p>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2>十一、您的權利</h2>
+        <p>依適用法令，您可就您的個人資料提出下列請求：</p>
+        <ul>
+          <li>查詢、閱覽或取得複製本；</li>
+          <li>補充、更正或更新；</li>
+          <li>停止蒐集、處理或利用，或撤回同意；</li>
+          <li>刪除帳號、特定資料或健康同步資料；</li>
+          <li>在適用法令提供時，要求資料可攜、限制處理或提出異議；</li>
+          <li>向主管機關提出申訴。</li>
+        </ul>
+        <p>
+          您可透過本政策的聯絡方式提出申請。我們可能在合理範圍內驗證身分，並依適用法令處理。若請求會影響未完成訂單、付款、配送、法定憑證保存或他人權益，我們會向您說明可處理範圍及必要限制。
+        </p>
+      </section>
+
+      <section class="policy-section" id="children">
+        <h2>十二、未成年人</h2>
+        <p>
+          本 App 主要提供銀髮健康、飲食及照護相關服務，並非以兒童為主要對象。未成年人使用帳號、付費、健康資料或照護服務時，應由法定代理人或監護人閱讀本政策並提供依法所需的同意。若我們發現未經適當同意而蒐集未成年人資料，將採取合理措施限制使用或刪除該資料。
+        </p>
+      </section>
+
+      <section class="policy-section" id="medical-disclaimer">
+        <h2>十三、健康資訊與醫療免責說明</h2>
+        <p>
+          本 App 提供的飲食、健康紀錄、趨勢、提醒或一般性資訊，主要用於個人健康管理與生活參考，除非特定功能已取得法定醫療器材或醫療服務所需資格，否則不構成診斷、治療、處方或緊急醫療建議，也不應取代合格醫事人員的判斷。如有緊急症狀或醫療疑慮，請立即聯絡當地緊急服務或合格醫事人員。
+        </p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <h2>十四、政策更新</h2>
+        <p>
+          本政策可能因功能、技術、合作服務、法令或 Apple／Google 平台政策調整而更新。重大變更涉及新的敏感資料類型、用途或分享對象時，我們將以 App 內通知、網站公告或其他適當方式告知，並在依法或依平台政策需要時重新取得同意。頁首會標示最新生效及更新日期。
+        </p>
       </section>
     </article>
 
-    <div class="contact-box">
-      <h2>客服聯絡方式</h2>
-      <p>會員資料、訂單、付款、取消或退款問題，請聯絡客服。</p>
+    <div class="contact-box" id="contact">
+      <h2>十五、聯絡我們</h2>
+      <p>有關隱私權、健康資料、權限撤回、帳號刪除、訂單、付款、取消或退款問題，請聯絡客服。</p>
       <div class="contact-links">
-        <a href="mailto:service@zaogod.com">✉ service@zaogod.com</a>
-        <a href="tel:0225796818">📞 02-25796818</a>
+        <a href="mailto:service@zaogod.com">電子郵件：service@zaogod.com</a>
+        <a href="tel:+886225796818">客服電話：02-2579-6818</a>
       </div>
     </div>
 
     <nav class="policy-nav" aria-label="法律與消費者權益文件">
       <a href="https://landerwang.asuscomm.com:5174/terms.html">會員服務條款</a>
-      <a href="https://landerwang.asuscomm.com:5174/privacy.html">隱私權政策</a>
+      <a href="https://landerwang.asuscomm.com:5174/privacy.html" aria-current="page">隱私權政策</a>
       <a href="https://landerwang.asuscomm.com:5174/refund.html">取消與退款政策</a>
+      <a href="#account-deletion">帳號與資料刪除</a>
     </nav>
+
+    <p class="footer-note">© 2026 HealthLiff・灶神在家・銀髮健康餐</p>
   </main>
-
-
-</body><div class="xl-chrome-ext-bar_4DB361DE-01F7-4376-B494-639E489D19ED" id="xl_chrome_ext_4DB361DE-01F7-4376-B494-639E489D19ED" data-v-app="" style="display: block;"><div class=""><div id="xl_chrome_ext_video_tag_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED" config="[object Object]" uiversion="v2" exception="true" latestvideosrc="" isshowvideotag="false" isshowdownloadbar="true" isshowcloudaddbar="false"><div class="_video_op_wrapper_96mx8_1" config="[object Object]" uiversion="v2" style="display: none;"><ul class="_video_op_list_96mx8_17"><li class="_op_item_96mx8_39 _download_96mx8_45"><span class="_op_icon_96mx8_25"></span><span class="_op_text_96mx8_31">下载</span></li><li class="_op_item_96mx8_39 _screen_96mx8_51"><span class="_op_icon_96mx8_25"></span><span class="_op_text_96mx8_31">投屏</span></li></ul></div></div><div class="badge_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED _badge_wrapper_wnbzb_1" id="badge_wrapper_4DB361DE-01F7-4376-B494-639E489D19ED"><div class="_logo_wnbzb_24"></div><span class="_line_wnbzb_32"></span><div class="_text_wrapper_wnbzb_39"><span class="_download_icon_wnbzb_51"></span><span class="_text_wnbzb_39">高速下载</span></div></div><!----><!----><!----><!----><div class="_container_wq4mj_4"><!----></div></div></div></html>
+</body>
+</html>
